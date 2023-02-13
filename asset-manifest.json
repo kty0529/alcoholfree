@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/alcoholfree/static/css/main.073c9b0a.css",
+    "main.js": "/alcoholfree/static/js/main.29b35858.js",
+    "index.html": "/alcoholfree/index.html",
+    "main.073c9b0a.css.map": "/alcoholfree/static/css/main.073c9b0a.css.map",
+    "main.29b35858.js.map": "/alcoholfree/static/js/main.29b35858.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.29b35858.js"
+  ]
+}
