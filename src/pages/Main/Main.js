@@ -1,19 +1,14 @@
 import './Main.scss';
 import sample from '../../assets/images/sample.webp';
 
+// components
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+
 function Main() {
   return (
     <div id="main">
-      <header className="header">
-        <h1 className="title"><a href="#main">A.</a></h1>
-
-        <nav className="navigation">
-          <ul>
-            <li><a href="#1">nav1</a></li>
-            <li><a href="#2">nav2</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       <main className="main">
         <div className="lists">
@@ -21,7 +16,36 @@ function Main() {
             <li>
               <a href="#1">
                 <div className="item">
-                  <img className="thumbnail" src={sample} alt="썸네일 이미지" />
+                  <div className="thumbnail">
+                    <img src={sample} alt="썸네일 이미지" />
+                    <span className="degree">41%</span>
+                  </div>
+
+                  <div className="content">
+                    <div className="title">파코리 16년</div>
+
+                    <div className="category">깔바도스</div>
+
+                    <div className="price">129.000원</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#1">
+                <div className="item">
+                  <div className="thumbnail">
+                    <img src={sample} alt="썸네일 이미지" />
+                    <span className="degree">41%</span>
+                  </div>
+
+                  <div className="content">
+                    <div className="title">파코리 16년</div>
+
+                    <div className="category">깔바도스</div>
+
+                    <div className="price">129.000원</div>
+                  </div>
                 </div>
               </a>
             </li>
@@ -29,7 +53,7 @@ function Main() {
         </div>
       </main>
 
-      <footer className="footer">(c) Alcohol Free ~ 🎵</footer>
+      <Footer />
     </div>
   );
 }
