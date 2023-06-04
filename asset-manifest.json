@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/alcoholfree/static/css/main.073c9b0a.css",
+    "main.css": "/alcoholfree/static/css/main.16f11050.css",
     "main.js": "/alcoholfree/static/js/main.703e835e.js",
     "index.html": "/alcoholfree/index.html",
-    "main.073c9b0a.css.map": "/alcoholfree/static/css/main.073c9b0a.css.map",
+    "main.16f11050.css.map": "/alcoholfree/static/css/main.16f11050.css.map",
     "main.703e835e.js.map": "/alcoholfree/static/js/main.703e835e.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
+    "static/css/main.16f11050.css",
     "static/js/main.703e835e.js"
   ]
 }
