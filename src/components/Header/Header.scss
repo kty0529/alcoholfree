@@ -8,11 +8,19 @@
   border-bottom: 1px solid #ddd;
 
   .title {
+    flex: 1 1 auto;
     font-size: 14px;
     font-weight: 900;
+
+    img {
+      max-width: 120px;
+      width: 100%;
+    }
   }
 
   .navigation {
+    flex: 0 0 auto;
+
     ul {
       display: flex;
       align-items: center;
@@ -25,7 +33,15 @@
     li {}
 
     a {
-      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      text-align: center;
+
+      span {
+        font-size: inherit;
+      }
     }
   }
 }

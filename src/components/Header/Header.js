@@ -1,14 +1,27 @@
-import './Header.scss'
+import "./Header.scss";
+import Logo from "../../assets/svgs/logo.svg";
 
 function Header() {
   return (
     <header className="header">
-      <h1 className="title"><a href="#main">A.</a></h1>
+      <h1 className="title">
+        <a href="#main" aria-label="알콜프리">
+          <img src={Logo} alt="알콜프리 로고 이미지" />
+        </a>
+      </h1>
 
       <nav className="navigation">
         <ul>
-          <li><a href="#1">nav1</a></li>
-          <li><a href="#2">nav2</a></li>
+          <li>
+            <a href="#1" aria-label="검색">
+              <span className="material-icons-outlined">search</span>
+            </a>
+          </li>
+          <li>
+            <a href="#2" aria-label="분류">
+              <span className="material-icons-outlined">inventory_2</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
