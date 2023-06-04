@@ -1,9 +1,9 @@
-import './Main.scss';
-import sample from '../../assets/images/sample.webp';
+import "./Main.scss";
+import sample from "../../assets/images/sample.webp";
 
 // components
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function Main() {
   return (
