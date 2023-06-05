@@ -14,12 +14,13 @@ body {
   flex-direction: column;
   margin: 0 auto;
   max-width: 425px;
-  background-color: #fff;
 }
 
 .main {
   padding: 0 16px;
   flex: 1 1 auto;
+  background-color: #fff;
+  border-radius: 0 0 4px 4px;
 
   .lists {
     ul {
