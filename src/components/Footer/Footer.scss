@@ -1,11 +1,23 @@
 .footer {
-  padding: 0 16px;
   flex: 0 0 auto;
-  font-size: 12px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100px;
+  font-size: 10px;
   color: #999;
+  font-weight: 700;
   text-align: center;
+  background-color: #f1f1f1;
+
   cursor: default;
   pointer-events: none;
   touch-action: none;
   user-select: none;
+
+  .icon {
+    font-size: 16px;
+  }
 }
