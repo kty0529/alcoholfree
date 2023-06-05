@@ -1,0 +1,62 @@
+[
+  {
+    "id": 4,
+    "name": "디아블로 다크 (레드)",
+    "country": "칠레",
+    "proof": 0,
+    "thumbnail": "",
+    "price": [
+      {
+        "amount": 10000,
+        "store": "GS25"
+      }
+    ],
+    "category": "와인"
+  },
+  {
+    "id": 3,
+    "name": "라크라사드 까베네시라 (쉬라)",
+    "country": "프랑스",
+    "proof": 0,
+    "thumbnail": "https://via.placeholder.com/150x150?text=0",
+    "price": [
+      {
+        "amount": 10000,
+        "store": "GS25"
+      }
+    ],
+    "category": "와인"
+  },
+  {
+    "id": 2,
+    "name": "링컨 (레드)",
+    "country": "미국",
+    "proof": 0,
+    "thumbnail": "https://via.placeholder.com/150x150?text=1",
+    "price": [
+      {
+        "amount": 10000,
+        "store": "GS25"
+      }
+    ],
+    "category": "와인"
+  },
+  {
+    "id": 1,
+    "name": "서브미션 (레드)",
+    "country": "미국",
+    "proof": 0,
+    "thumbnail": "https://via.placeholder.com/150x150?text=2",
+    "price": [
+      {
+        "amount": 20000,
+        "store": "슬로우보틀"
+      },
+      {
+        "amount": 10000,
+        "store": "GS25"
+      }
+    ],
+    "category": "와인"
+  }
+]
