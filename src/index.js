@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Main from "./pages/Main/Main";
 
-// reset css
+// common
 import "./assets/scss/reset.scss";
+import "./assets/scss/common.scss";
 
 // vendor
 import "material-icons/iconfont/material-icons.css";
