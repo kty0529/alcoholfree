@@ -1,17 +1,7 @@
-
 import "./DrinkListItem.scss";
 
-type DrinkListItemProps = {
-  name: string,
-  category: string,
-  store: string,
-  price: number,
-  proof: number,
-  thumbnail: string,
-}
-
 function DrinkListItem(props) {
-  console.log(props.thumbnail);
+  const NumberFormat = new Intl.NumberFormat();
 
   return (
     <a href="#1">
@@ -28,7 +18,7 @@ function DrinkListItem(props) {
 
           <div className="price">
             <span className="store">{props.store}</span>
-            <span className="amount">{props.price}원</span>
+            <span className="amount">{NumberFormat.format(props.price)}원</span>
           </div>
         </div>
       </div>

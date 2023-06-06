@@ -47,9 +47,15 @@
     }
 
     .price {
+      display: flex;
+      gap: 4px;
       font-size: 12px;
       font-weight: 700;
       color: #00c;
+
+      .store {}
+
+      .amount {}
     }
   }
 }
