@@ -7,14 +7,15 @@
   padding: 0 16px;
   background-color: #f1f1f1;
   color: #999;
-  cursor: default;
   font-size: 10px;
   font-weight: 700;
-  gap: 4px;
-  pointer-events: none;
-  text-align: center;
-  touch-action: none;
-  user-select: none;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1;
+  }
 
   .icon {
     font-size: 16px;
