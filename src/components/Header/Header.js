@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header">
       <h1 className="title">
-        <a href="/" aria-label="알콜프리">
+        <a href={process.env.PUBLIC_URL} aria-label="알콜프리">
           <img src={Logo} alt="알콜프리 로고 이미지" />
         </a>
       </h1>
