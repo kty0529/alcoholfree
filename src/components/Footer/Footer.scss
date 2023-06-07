@@ -1,19 +1,18 @@
 .footer {
-  flex: 0 0 auto;
-  padding: 0 16px;
   display: flex;
+  height: 100px;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  height: 100px;
-  font-size: 10px;
-  color: #999;
-  font-weight: 700;
-  text-align: center;
+  padding: 0 16px;
   background-color: #f1f1f1;
-
+  color: #999;
   cursor: default;
+  font-size: 10px;
+  font-weight: 700;
+  gap: 4px;
   pointer-events: none;
+  text-align: center;
   touch-action: none;
   user-select: none;
 
