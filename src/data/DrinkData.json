@@ -1,62 +1,60 @@
 [
   {
-    "id": 4,
-    "name": "디아블로 다크 (레드)",
+    "name": {
+      "kr" : "디아블로 다크 레드",
+      "en" : "Diablo Dark Red"
+    },
+    "proof": 13.5,
+    "price": [
+      {
+        "amount": 24545,
+        "store": "와인아트"
+      }
+    ],
+    "category": "와인",
     "country": "칠레",
-    "proof": 0,
-    "thumbnail": "",
-    "price": [
-      {
-        "amount": 10000,
-        "store": "GS25"
-      }
-    ],
-    "category": "와인"
+    "tags": ["레드"],
+    "thumbnail": "/wine/Diablo_Dark_Red.webp"
   },
   {
-    "id": 3,
-    "name": "라크라사드 까베네시라 (쉬라)",
+    "name": {
+      "kr" : "라 크라사드, 카버네 시라",
+      "en" : "La Croisade, Cabernet Syrah"
+    },
+    "proof": null,
+    "price": [],
+    "category": "와인",
     "country": "프랑스",
-    "proof": 0,
-    "thumbnail": "https://via.placeholder.com/150x150?text=0",
-    "price": [
-      {
-        "amount": 10000,
-        "store": "GS25"
-      }
-    ],
-    "category": "와인"
+    "tags": ["레드"],
+    "thumbnail": "/wine/La_Croisade_Cabernet_Syrah.webp"
   },
   {
-    "id": 2,
-    "name": "링컨 (레드)",
+    "name": {
+      "kr" : "링컨 까베르네 소비뇽 나파밸리",
+      "en" : "Lincoln Cabernet Sauvignon Napa Valley"
+    },
+    "proof": 15,
+    "price": null,
+    "category": "와인",
     "country": "미국",
-    "proof": 0,
-    "thumbnail": "https://via.placeholder.com/150x150?text=1",
-    "price": [
-      {
-        "amount": 10000,
-        "store": "GS25"
-      }
-    ],
-    "category": "와인"
+    "tags": ["레드"],
+    "thumbnail": "/wine/Lincoln_Cabernet_Sauvignon_Napa_Valley.webp"
   },
   {
-    "id": 1,
-    "name": "서브미션 (레드)",
-    "country": "미국",
-    "proof": 0,
-    "thumbnail": "https://via.placeholder.com/150x150?text=2",
+    "name": {
+      "kr" : "서브미션 까베르네 소비뇽",
+      "en" : "Submission Cabernet Sauvignon"
+    },
+    "proof": 14.5,
     "price": [
       {
-        "amount": 20000,
-        "store": "슬로우보틀"
-      },
-      {
-        "amount": 10000,
-        "store": "GS25"
+        "amount": 25000,
+        "store": "강남와인"
       }
     ],
-    "category": "와인"
+    "category": "와인",
+    "country": "미국",
+    "tags": ["레드"],
+    "thumbnail": "/wine/Submission_Cabernet_Sauvignon.webp"
   }
 ]

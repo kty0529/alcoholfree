@@ -18,13 +18,7 @@ function Main() {
                 return (
                   <li key={index}>
                     <DrinkListItem
-                      name={item.name}
-                      category={item.category}
-                      store={item.price[0].store}
-                      price={item.price[0].amount}
-                      proof={item.proof}
-                      thumbnail={item.thumbnail}
-                    />
+                      {...item} />
                   </li>
                 )
               })
