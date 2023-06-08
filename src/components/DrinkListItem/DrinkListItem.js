@@ -20,7 +20,6 @@ function DrinkListItem(props) {
           <div className="category">{props.category}</div>
 
           <div className="price">
-            {console.log(props.price)}
             {
               props.price && props.price.map((store, index) => {
                 return index === 0 && (
