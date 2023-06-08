@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables';
+
 .header {
   position: sticky;
   z-index: 10;
@@ -8,8 +10,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff;
+  border-bottom: 1px solid $gray;
+  background-color: $white;
 
   .title {
     flex: 1 1 auto;

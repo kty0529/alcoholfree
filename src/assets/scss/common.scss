@@ -1,6 +1,8 @@
+@import '../../assets/scss/variables';
+
 html,
 body {
   min-height: 100vh;
-  background-color: #f1f1f1;
+  background-color: $lightgray;
   overflow-x: clip;
 }

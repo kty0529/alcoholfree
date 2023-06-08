@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables';
+
 .item {
   display: flex;
   align-items: center;
@@ -9,7 +11,7 @@
     width: 120px;
     height: 120px;
     border-radius: 4px;
-    background-color: #f1f1f1;
+    background-color: $lightgray;
 
     img {
       width: 100%;
@@ -27,8 +29,9 @@
       align-items: center;
       justify-content: center;
       padding: 0 4px;
-      background-color: #c00;
-      color: #fff;
+      border-radius: 0 4px 0 0;
+      background-color: $error;
+      color: $white;
       font-size: 10px;
       font-weight: 800;
     }
@@ -41,7 +44,7 @@
 
       small {
         display: block;
-        color: #666;
+        color: $darkgray;
         font-size: 12px;
       }
     }
@@ -53,7 +56,7 @@
 
     .price {
       margin-top: 8px;
-      color: #00c;
+      color: $info;
       font-size: 12px;
       font-weight: 700;
       line-height: 1;

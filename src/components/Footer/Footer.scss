@@ -1,3 +1,5 @@
+@import '../../assets/scss/variables';
+
 .footer {
   display: flex;
   height: 100px;
@@ -5,8 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 16px;
-  background-color: #f1f1f1;
-  color: #999;
+  color: $darkgray;
   font-size: 10px;
   font-weight: 700;
 
