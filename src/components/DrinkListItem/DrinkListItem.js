@@ -7,7 +7,7 @@ function DrinkListItem(props) {
     <a href={`#${props.name.kr}`}>
       <div className="item">
         <div className="thumbnail">
-          {props.thumbnail && <img src={process.env.PUBLIC_URL + "/assets/images" + props.thumbnail} alt="썸네일 이미지" />}
+          {props.thumbnail && <img src={require(`../../assets/images/${props.thumbnail}`)} alt="썸네일 이미지" />}
           {props.proof && <span className="proof">{props.proof}%</span>}
         </div>
 
