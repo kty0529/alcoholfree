@@ -1,13 +1,5 @@
 @import '../../assets/scss/variables';
 
-#main {
-  display: flex;
-  max-width: 425px;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
 .main {
   flex: 1 1 auto;
   padding: 0 16px;
