@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "./DrinkListItem.scss";
 
 function DrinkListItem(props) {
   const NumberFormat = new Intl.NumberFormat();
 
   return (
-    <a href={`#${props.name.kr}`}>
+    <Link to={`./${props.name.kr}`}>
       <div className="item">
         <div className="thumbnail">
           {props.thumbnail && <img src={require(`../../assets/images/${props.thumbnail}`)} alt="썸네일 이미지" />}
@@ -33,7 +34,7 @@ function DrinkListItem(props) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
 
