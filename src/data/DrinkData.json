@@ -7,6 +7,10 @@
     "proof": 13.5,
     "price": [
       {
+        "amount": 19900,
+        "store": "GS25"
+      },
+      {
         "amount": 24545,
         "store": "와인아트"
       }
