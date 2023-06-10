@@ -29,3 +29,6 @@ Thumbs.db
 /js/coverage/
 /node_modules/
 /build/
+
+# Files
+.env
