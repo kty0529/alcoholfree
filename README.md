@@ -1,4 +1,4 @@
-내가 뭐 마셨더라? 🧐🍷
+<p align="center"><img src="https://github.com/kty0529/alcoholfree/assets/32983425/12880d97-0cac-4dfd-b939-e3561d7543e5" alt="cheers"/></p>
 
 ---
 
