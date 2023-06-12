@@ -20,7 +20,7 @@ function Main() {
       });
   }, []);
 
-  const statusClass = isLoaded && error === null ? "done" : "loading";
+  const statusClass = (! isLoaded || error) ? "loading" : "";
 
   return (
     <main className={`main ${statusClass}`}>
