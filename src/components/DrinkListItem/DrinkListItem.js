@@ -2,11 +2,7 @@
 import { Link } from "react-router-dom";
 import "./DrinkListItem.scss";
 
-
-
 function DrinkListItem(props) {
-  // const NumberFormat = new Intl.NumberFormat();
-
   const DATA = props.properties;
 
   const uid = DATA.ID.unique_id.prefix + DATA.ID.unique_id.number;

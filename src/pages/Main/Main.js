@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
 import DrinkListItem from "../../components/DrinkListItem/DrinkListItem";
-// import DrinkData from "../../data/DrinkData.json";
 
 import "./Main.scss";
 
@@ -11,8 +9,6 @@ function Main() {
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    console.log("fetchDrinkList");
-
     fetch(process.env.REACT_APP_NOTION_API)
       .then((res) => res.json())
       .then((res) => {
