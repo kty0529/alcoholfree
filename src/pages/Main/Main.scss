@@ -8,6 +8,31 @@
   border-radius: 0 0 4px 4px;
   background-color: $white;
 
+  &.loading {
+    display: flex;
+    flex-direction: column;
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-align: center;
+
+      .icon {
+        color: $darkgray;
+        font-size: 28px;
+      }
+
+      .text {
+        color: $black;
+        font-size: 12px;
+      }
+    }
+  }
+
   .lists {
     ul {
       padding: 0;

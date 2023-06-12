@@ -2,6 +2,7 @@
 
 .item {
   display: flex;
+  width: 100%;
   align-items: center;
   gap: 16px;
 
@@ -52,19 +53,6 @@
     .category {
       margin-top: 4px;
       font-size: 12px;
-    }
-
-    .price {
-      margin-top: 8px;
-      color: $info;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1;
-
-      .block {
-        display: flex;
-        gap: 4px;
-      }
     }
   }
 }
