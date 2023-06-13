@@ -5,27 +5,37 @@ import "./DrinkListItem.scss";
 function DrinkListItem(props) {
   const DATA = props.properties;
 
-  const uid = DATA.ID.unique_id.prefix + DATA.ID.unique_id.number;
-  const thumbnail = DATA.Picture.files[0]?.file.url;
-  const proof = DATA.Proof.number;
-  const name = DATA.Name.title[0]?.plain_text;
-  const name_en = DATA.Name_en.rich_text[0]?.plain_text;
-  const category = DATA.Category.select.name;
+  const ITEM_DATA = {
+    uid: props.id,
+    thumbnail: DATA.Picture.files[0]?.file.url,
+    proof: DATA.Proof.number,
+    name: DATA.Name.title[0]?.plain_text,
+    name_en: DATA.Name_en.rich_text[0]?.plain_text,
+    category: DATA.Category.select.name,
+    tags: DATA.Tags,
+    country: DATA.Country.rich_text[0]?.plain_text,
+    brewery: DATA.Brewery.rich_text[0]?.plain_text,
+  }
+
+  console.log(DATA);
 
   return (
-    <Link to={uid} className="item">
+    <Link
+      to={ITEM_DATA.uid}
+      state={ITEM_DATA}
+      className="item">
       <div className="thumbnail">
-        {thumbnail && <img src={thumbnail} alt="썸네일 이미지" />}
-        {proof && <span className="proof">{proof}%</span>}
+        {ITEM_DATA.thumbnail && <img src={ITEM_DATA.thumbnail} alt="썸네일 이미지" />}
+        {ITEM_DATA.proof && <span className="proof">{ITEM_DATA.proof}%</span>}
       </div>
 
       <div className="content">
         <div className="title">
-          {name}
-          {name_en && <small>{name_en}</small>}
+          {ITEM_DATA.name}
+          {ITEM_DATA.name_en && <small>{ITEM_DATA.name_en}</small>}
         </div>
 
-        <div className="category">{category}</div>
+        <div className="category">{ITEM_DATA.category}</div>
       </div>
     </Link>
   )
