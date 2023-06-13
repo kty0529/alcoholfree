@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @import '../../assets/scss/helpers';
 
 html,
@@ -13,4 +15,12 @@ body {
   min-height: 100vh;
   flex-direction: column;
   margin: 0 auto;
+}
+
+// notion multi select colors
+@each $color, $map in $notion_multi_select_colors {
+  .notion-multi-select-color-#{$color} {
+    background-color: map-get($map, "background");
+    color: map-get($map, "text");
+  }
 }

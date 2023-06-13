@@ -10,3 +10,50 @@ $error: #c00;
 $warning: #fc0;
 $success: #0c0;
 $info: #00c;
+
+$notion_multi_select_colors: (
+  "default": (
+    "text": rgb(50, 48, 44),
+    "background": rgba(227, 226, 224, 0.5)
+  ),
+  "lightgray": (
+    "text": rgb(50, 48, 44),
+    "background": rgba(227, 226, 224, 0.5)
+  ),
+  "gray": (
+    "text": rgb(50, 48, 44),
+    "background": rgb(227, 226, 224)
+  ),
+  "brown": (
+    "text": rgb(68, 42, 30),
+    "background": rgb(238, 224, 218)
+  ),
+  "orange": (
+    "text": rgb(73, 41, 14),
+    "background": rgb(250, 222, 201)
+  ),
+  "yellow": (
+    "text": rgb(64, 44, 27),
+    "background": rgb(253, 236, 200)
+  ),
+  "green": (
+    "text": rgb(28, 56, 41),
+    "background": rgb(219, 237, 219)
+  ),
+  "blue": (
+    "text": rgb(24, 51, 71),
+    "background": rgb(211, 229, 239)
+  ),
+  "purple": (
+    "text": rgb(65, 36, 84),
+    "background": rgb(232, 222, 238)
+  ),
+  "pink": (
+    "text": rgb(76, 35, 55),
+    "background": rgb(245, 224, 233)
+  ),
+  "red": (
+    "text": rgb(93, 23, 21),
+    "background": rgb(255, 226, 221)
+  )
+)
