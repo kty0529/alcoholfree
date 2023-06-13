@@ -32,7 +32,10 @@ function Detail() {
           <img src={thumbnail} alt={`${name} 썸네일 이미지`} />
 
           <a
-            href={thumbnail} aria-label="원본보기">
+            href={thumbnail}
+            aria-label="원본보기"
+            target="_blank"
+            rel="noreferrer">
               <span className="material-icons-outlined">open_in_new</span>
             </a>
         </div>
