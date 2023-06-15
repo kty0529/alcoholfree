@@ -1,2 +1,3 @@
 - [ ] react query 또는 axios 사용해서 데이터 통신
 - [ ] 상세페이지 내 데이터 연결
+- [ ] .jsx 확장자에서 발생하는 오류 제거 `Unknown word (CssSyntaxError)Stylelint(CssSyntaxError)`
