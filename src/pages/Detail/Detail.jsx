@@ -1,70 +1,99 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Detail.scss";
 
 function Detail() {
-  // 이전 페이지 데이터 가져오기
-  const location = useLocation();
-  const { uid, name, name_en, thumbnail, proof, category, country, brewery, tags } = location.state;
+  const { page_id } = useParams();
 
   // 페이지 콘텐츠 가져오기
   const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_NOTION_API}/blocks.php?id=${uid}`)
+    fetch(`${process.env.REACT_APP_NOTION_API}/pages.php?id=${page_id}`)
       .then((res) => res.json())
       .then((res) => {
-        setIsLoaded(true);
-        setItem(res.results);
+        // setIsLoaded(true);
+        setItem(res.properties);
       }, (error) => {
-        setIsLoaded(true);
+        // setIsLoaded(true);
         setError(error);
       });
   }, []);
 
-  console.log(item, error, isLoaded);
+  const ITEM_DATA = {
+    thumbnail: item.Picture?.files[0]?.file.url,
+    name: item.Name?.title[0]?.plain_text,
+    name_en: item.Name_en?.rich_text[0]?.plain_text,
+    proof: item.Proof?.number,
+    category: item.Category?.select.name,
+    country: item.Country?.rich_text[0]?.plain_text,
+    brewery: item.Brewery?.rich_text[0]?.plain_text,
+    tags: item.Tags?.multi_select,
+  }
 
   return (
-      <main className="detail">
-        <div className="thumbnail">
-          <img src={thumbnail} alt={`${name} 썸네일 이미지`} />
+    <main className="detail">
+      {
+        error
+        ? (
+          <>
+            로딩중 에러가 발생했습니다.
+          </>
+        )
+        : (
+          <>
+            {
+              ITEM_DATA.thumbnail && (
+                <div className="thumbnail">
+                  <img
+                    src={ITEM_DATA.thumbnail}
+                    alt="썸네일 이미지"
+                  />
 
-          <a
-            href={thumbnail}
-            aria-label="원본보기"
-            target="_blank"
-            rel="noreferrer">
-              <span className="material-icons-outlined">open_in_new</span>
-            </a>
-        </div>
+                  <a
+                    href={ITEM_DATA.thumbnail}
+                    aria-label="이미지 원본 보기"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                      <span className="material-icons-outlined">
+                        open_in_new
+                      </span>
+                    </a>
+                </div>
+              )
+            }
 
-        <div className="data">
-          <h2 className="title">{name}</h2>
+            <div className="data">
+              <h2 className="title">{ITEM_DATA.name}</h2>
 
-          <ul>
-            {name_en && <li className="name_en"><strong>영문</strong> : {name_en}</li>}
-            {proof && <li className="proof"><strong>도수</strong> : {proof}%</li>}
-            {category && <li className="category"><strong>종류</strong> : {category}</li>}
-            {country && <li className="country"><strong>국가</strong> : {country}</li>}
-            {brewery && <li className="brewery"><strong>제조</strong> : {brewery}</li>}
-            {tags.multi_select && (
-              <li className="tags">
-                {tags.multi_select.map((tag, index) => (
-                  <span
-                    key={index}
-                    className={`notion-multi-select-color-${tag.color}`}>{tag.name}</span>
-                ))}
-              </li>
-            )}
-          </ul>
-        </div>
+              <ul>
+                {ITEM_DATA.name_en && <li className="name_en"><strong>영문</strong> : {ITEM_DATA.name_en}</li>}
+                {ITEM_DATA.proof && <li className="proof"><strong>도수</strong> : {ITEM_DATA.proof}%</li>}
+                {ITEM_DATA.category && <li className="category"><strong>분류</strong> : {ITEM_DATA.category}</li>}
+                {ITEM_DATA.country && <li className="country"><strong>제조국</strong> : {ITEM_DATA.country}</li>}
+                {ITEM_DATA.brewery && <li className="brewery"><strong>제조사</strong> : {ITEM_DATA.brewery}</li>}
+                {ITEM_DATA.tags && (
+                  <li className="tags">
+                    {ITEM_DATA.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className={`notion-multi-select-color-${tag.color}`}>{tag.name}</span>
+                    ))}
+                  </li>
+                )}
+              </ul>
+            </div>
 
-        <div className="content">
-          둠칫
-        </div>
-      </main>
+            <div className="content">
+              둠칫
+            </div>
+          </>
+        )
+      }
+    </main>
   );
 }
 

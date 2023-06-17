@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <Main />,
   },
   {
-    path: "alcoholfree/:id",
+    path: "alcoholfree/:page_id",
     element: <Detail />,
   }
 ]);
