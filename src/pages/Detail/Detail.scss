@@ -3,7 +3,9 @@
 
 // pages
 .detail {
+  display: flex;
   flex: 1 1 auto;
+  flex-direction: column;
   border-radius: 0 0 4px 4px;
   background-color: $white;
 

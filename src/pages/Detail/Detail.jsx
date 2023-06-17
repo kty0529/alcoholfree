@@ -39,8 +39,7 @@ function Detail() {
   return (
     <main className="detail">
       {
-        isLoaded
-        ? <Loading />
+        ! isLoaded ? <Loading />
         : (
           <>
             {

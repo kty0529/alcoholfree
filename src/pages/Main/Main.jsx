@@ -22,10 +22,8 @@ function Main() {
       });
   }, []);
 
-  const statusClass = (! isLoaded || error) ? "loading" : "";
-
   return (
-    <main className={`main ${statusClass}`}>
+    <main className="main">
       {
         error && (
           <>로딩중 에러가 발생했습니다.</>
