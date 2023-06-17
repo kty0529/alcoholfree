@@ -53,6 +53,15 @@
     .category {
       margin-top: 4px;
       font-size: 12px;
+
+      span {
+        display: inline-flex;
+        height: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 6px;
+        border-radius: 4px;
+      }
     }
   }
 }

@@ -12,6 +12,7 @@ function DrinkListItem(props) {
     name: DATA.Name?.title[0]?.plain_text,
     name_en: DATA.Name_en?.rich_text[0]?.plain_text,
     category: DATA.Category?.select.name,
+    category_color: DATA.Category?.select.color,
   }
 
   return (
@@ -30,7 +31,9 @@ function DrinkListItem(props) {
           {ITEM_DATA.name_en && <small>{ITEM_DATA.name_en}</small>}
         </div>
 
-        <div className="category">{ITEM_DATA.category}</div>
+        <div className="category">
+          <span className={`notion-multi-select-color-${ITEM_DATA.category_color}`}>{ITEM_DATA.category}</span>
+        </div>
       </div>
     </Link>
   )
