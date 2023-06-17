@@ -52,29 +52,37 @@ function Detail() {
             <>
               {
                 ITEM_DATA.thumbnail && (
-                  <div className="thumbnail">
+                  <div className="thumbnail-block">
                     <img
+                      className="thumbnail"
                       src={ITEM_DATA.thumbnail}
                       alt="썸네일 이미지"
                     />
 
                     <a
+                      className="original"
                       href={ITEM_DATA.thumbnail}
                       aria-label="이미지 원본 보기"
                       target="_blank"
                       rel="noreferrer"
                     >
-                        <span className="material-icons-outlined">
-                          open_in_new
-                        </span>
-                      </a>
+                      <span className="material-icons-outlined">
+                        open_in_new
+                      </span>
+                    </a>
+
+                    <img
+                      className="background"
+                      src={ITEM_DATA.thumbnail}
+                      alt="썸네일 이미지"
+                    />
                   </div>
                 )
               }
 
               {
                 ITEM_DATA.name && (
-                  <div className="data">
+                  <div className="data-block">
                     <h2 className="title">{ITEM_DATA.name}</h2>
 
                     <ul>
@@ -97,7 +105,7 @@ function Detail() {
                 )
               }
 
-              {/* <div className="content">
+              {/* <div className="content-block">
                 둠칫
               </div> */}
             </>
