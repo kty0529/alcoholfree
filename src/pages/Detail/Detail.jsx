@@ -89,9 +89,9 @@ function Detail() {
               )
             }
 
-            <div className="content">
+            {/* <div className="content">
               둠칫
-            </div>
+            </div> */}
           </>
         )
       }
