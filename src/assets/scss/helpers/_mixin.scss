@@ -1,0 +1,5 @@
+@mixin disabled() {
+  pointer-events: none;
+  touch-action: none;
+  user-select: none;
+}
