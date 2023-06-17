@@ -4,5 +4,7 @@
 - [ ] 상세 페이지에서 새로고침 시 404 not found
   - [spa-github-pages](https://github.com/rafgraph/spa-github-pages)로 404는 해결
   - link to로 클릭한 링크에서 데이터를 가져오는데, 새로고침을 하면 해당 데이터들이 없어서 에러 발생 😢
-- [ ] api 로딩 실패에 대한 화면 생성
+- [ ] 상태 관련 컴포넌트 추가 및 적용
+  - [ ] 로딩중
+  - [ ] 에러
 - [ ] console에 로그가 두번씩 찍히는 현상
