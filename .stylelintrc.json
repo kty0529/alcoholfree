@@ -4,6 +4,12 @@
     "stylelint-config-idiomatic-order",
     "stylelint-config-recommended-scss"
   ],
+  "overrides": [
+    {
+      "files": ["**/*.jsx"],
+      "customSyntax": "@stylelint/postcss-css-in-js"
+    }
+  ],
   "plugins": ["stylelint-scss"],
   "rules": {
     "block-opening-brace-space-before": "always",
