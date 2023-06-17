@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+
+import Loading from "../../components/Loading/Loading";
 import DrinkListItem from "../../components/DrinkListItem/DrinkListItem";
 
 import "./Main.scss";
@@ -25,28 +27,30 @@ function Main() {
   return (
     <main className={`main ${statusClass}`}>
       {
-        ! isLoaded || error
-        ? (
-          <div className="message">
-            <span className="icon material-icons-outlined">hourglass_empty</span>
-            <div className="text">로딩이 계속되면 페이지를 새로고침 해주세요.</div>
-          </div>
+        error && (
+          <>로딩중 에러가 발생했습니다.</>
+        )
+      }
+
+      {
+        ! error && (
+          ! isLoaded ? <Loading />
+          : (
+            <div className="lists">
+              <ul>
+                {
+                  item.map((drink, index) => {
+                    return (
+                      <li key={index}>
+                        <DrinkListItem
+                          {...drink} />
+                      </li>
+                    )
+                  })
+                }
+              </ul>
+            </div>
           )
-        : (
-          <div className="lists">
-            <ul>
-              {
-                item.map((drink, index) => {
-                  return (
-                    <li key={index}>
-                      <DrinkListItem
-                        {...drink} />
-                    </li>
-                  )
-                })
-              }
-            </ul>
-          </div>
         )
       }
     </main>
