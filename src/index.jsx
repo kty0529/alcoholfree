@@ -8,12 +8,12 @@ import Footer from "./components/Footer/Footer";
 import Main from "./pages/Main/Main";
 import Detail from "./pages/Detail/Detail";
 
-// common
-import "./assets/scss/reset.scss";
-import "./assets/scss/common.scss";
-
 // vendor
 import "material-icons/iconfont/material-icons.css";
+
+// assets
+import "./assets/scss/reset.scss";
+import "./assets/scss/common.scss";
 
 const router = createBrowserRouter([
   {

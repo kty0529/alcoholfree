@@ -1,10 +1,11 @@
-import "./Footer.scss";
 import GitHubIcon from "../../assets/svgs/github.svg";
 
-const iconList = ["🍺", "🍻", "🍾", "🍷", "🍹", "🥂", "🍸", "🍶", "🥃"];
-const randomIcon = iconList[Math.floor(Math.random() * iconList.length)];
+import "./Footer.scss";
 
 function Footer() {
+  const iconList = ["🍺", "🍻", "🍾", "🍷", "🍹", "🥂", "🍸", "🍶", "🥃"];
+  const randomIcon = iconList[Math.floor(Math.random() * iconList.length)];
+
   return (
     <footer className="footer">
       <div className="copyright">
