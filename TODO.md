@@ -4,8 +4,9 @@
 
 - [ ] router errorElement 추가
 - [ ] react query 또는 axios 사용해서 데이터 통신 (cache를 위해?)
+- [ ] 이미지 로드에 블럭 현상을 보여주지 않게 적절한 효과 적용
 - [ ] 상세 페이지 내 page content 데이터 연결
-- [ ] console에 로그가 두번씩 찍히는 현상
+- [ ] console에 로그가 두번씩 찍히는 현상 (두번 이상도?)
 - [ ] Error, Loading 컴포넌트 하나로 합치고 재활용 가능하게 적절한 컴포넌트로 변경
   - 컴포넌트 구성 참고
     1. https://mui.com/material-ui/react-autocomplete/
