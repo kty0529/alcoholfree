@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "./DrinkListItem.scss";
+import Badge from "../Badge/Badge";
 
 function DrinkListItem(props) {
   const DATA = props.properties;
@@ -32,7 +33,10 @@ function DrinkListItem(props) {
         </div>
 
         <div className="category">
-          <span className={`notion-multi-select-color-${ITEM_DATA.category_color}`}>{ITEM_DATA.category}</span>
+          <Badge
+            color={ITEM_DATA.category_color}
+            text={ITEM_DATA.category}
+          />
         </div>
       </div>
     </Link>

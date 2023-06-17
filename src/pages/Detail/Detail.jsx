@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 // components
 import Error from "../../components/Error/Error";
 import Loading from "../../components/Loading/Loading";
+import Badge from "../../components/Badge/Badge";
 
 // pages
 import "./Detail.scss";
@@ -94,9 +95,11 @@ function Detail() {
                       {ITEM_DATA.tags && (
                         <li className="tags">
                           {ITEM_DATA.tags.map((tag, index) => (
-                            <span
+                            <Badge
                               key={index}
-                              className={`notion-multi-select-color-${tag.color}`}>{tag.name}</span>
+                              color={tag.color}
+                              text={tag.name}
+                            />
                           ))}
                         </li>
                       )}
