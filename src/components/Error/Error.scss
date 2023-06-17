@@ -1,6 +1,6 @@
 @import '../../assets/scss/helpers';
 
-.now-loading {
+.error-message {
   display: flex;
   min-height: 200px;
   flex-direction: column;
@@ -11,7 +11,7 @@
   text-align: center;
 
   .icon {
-    animation: loading-spin 2s infinite cubic-bezier(.81,.13,.24,.75);
+    animation: error-attension 1s cubic-bezier(1,0,0,1) 1 forwards;
     color: $darkgray;
     font-size: 28px;
   }
@@ -21,12 +21,18 @@
     font-size: 12px;
   }
 
-  @keyframes loading-spin {
+  @keyframes error-attension {
     0% {
-      transform: rotate(0deg);
+      font-size: 28px;
     }
-    80%, 100% {
-      transform: rotate(180deg);
+    80% {
+      color: red;
+      font-size: 80px;
+    }
+
+    100% {
+      color: red;
+      font-size: 50px;
     }
   }
 }

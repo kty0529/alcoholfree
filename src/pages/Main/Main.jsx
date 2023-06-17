@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 
+// components
 import Loading from "../../components/Loading/Loading";
 import DrinkListItem from "../../components/DrinkListItem/DrinkListItem";
+import Error from "../../components/Error/Error";
 
+// pages
 import "./Main.scss";
 
 function Main() {
@@ -25,9 +28,7 @@ function Main() {
   return (
     <main className="main">
       {
-        error && (
-          <>로딩중 에러가 발생했습니다.</>
-        )
+        error && <Error />
       }
 
       {
