@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alcoholfree/static/css/main.302061c0.css",
-    "main.js": "/alcoholfree/static/js/main.7337f958.js",
+    "main.js": "/alcoholfree/static/js/main.e454dc1b.js",
     "static/media/material-icons-two-tone.woff": "/alcoholfree/static/media/material-icons-two-tone.3baa5b8f3469222b822d.woff",
     "static/media/material-icons-two-tone.woff2": "/alcoholfree/static/media/material-icons-two-tone.4ef4218c522f1eb6b5b1.woff2",
     "static/media/material-icons-round.woff": "/alcoholfree/static/media/material-icons-round.5d681e2edae8c60630db.woff",
@@ -16,10 +16,10 @@
     "static/media/github.svg": "/alcoholfree/static/media/github.3b21c250a99986431958daaa9246a45a.svg",
     "index.html": "/alcoholfree/index.html",
     "main.302061c0.css.map": "/alcoholfree/static/css/main.302061c0.css.map",
-    "main.7337f958.js.map": "/alcoholfree/static/js/main.7337f958.js.map"
+    "main.e454dc1b.js.map": "/alcoholfree/static/js/main.e454dc1b.js.map"
   },
   "entrypoints": [
     "static/css/main.302061c0.css",
-    "static/js/main.7337f958.js"
+    "static/js/main.e454dc1b.js"
   ]
 }
