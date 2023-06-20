@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 // components
 import Header from "./components/Header/Header";
@@ -26,15 +27,19 @@ const router = createBrowserRouter([
   }
 ]);
 
+const queryClient = new QueryClient();
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className="container">
-      <Header />
+    <QueryClientProvider client={queryClient}>
+      <div className="container">
+        <Header />
 
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </QueryClientProvider>
   </React.StrictMode>
 );

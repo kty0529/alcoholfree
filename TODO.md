@@ -3,7 +3,6 @@
 ### Todo
 
 - [ ] router errorElement 추가
-- [ ] react query 또는 axios 사용해서 데이터 통신 (cache를 위해?)
 - [ ] 이미지 로드에 블럭 현상을 보여주지 않게 적절한 효과 적용
 - [ ] 상세 페이지 내 page content 데이터 연결
 - [ ] console에 로그가 두 번씩 찍히는 현상 (두 번 이상도?)
@@ -13,6 +12,7 @@
     2. https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
 ### Done
+- react query 또는 axios 사용해서 데이터 통신 (cache를 위해?)
 - .jsx 확장자에서 발생하는 오류 제거 `Unknown word (CssSyntaxError)Stylelint(CssSyntaxError)`
       <br />➡️ 스타일 린트에 jsx 파일 설정 추가하여 해결
 - 상세 페이지에서 새로고침 시 404 not found

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useQuery } from "react-query";
 
 // components
 import Error from "../../components/Error/Error";
@@ -13,31 +13,25 @@ function Detail() {
   const { page_id } = useParams();
 
   // 페이지 콘텐츠 가져오기
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [item, setItem] = useState([]);
+  const { isLoading, data, error } = useQuery("fetchDetail", async () => {
+    return await fetch(`${process.env.REACT_APP_NOTION_API}/pages.php?id=${page_id}`)
+      .then(res => res.json());
+  }, {
+    refetchOnWindowFocus: false
+  });
 
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_NOTION_API}/pages.php?id=${page_id}`)
-      .then((res) => res.json())
-      .then((res) => {
-        setIsLoaded(true);
-        setItem(res.properties);
-      }, (error) => {
-        setIsLoaded(true);
-        setError(error);
-      });
-  }, []);
-
-  const ITEM_DATA = {
-    thumbnail: item.Picture?.files[0]?.file.url,
-    name: item.Name?.title[0]?.plain_text,
-    name_en: item.Name_en?.rich_text[0]?.plain_text,
-    proof: item.Proof?.number,
-    category: item.Category?.select.name,
-    country: item.Country?.rich_text[0]?.plain_text,
-    brewery: item.Brewery?.rich_text[0]?.plain_text,
-    tags: item.Tags?.multi_select,
+  let ITEM_DATA = {};
+  if ( ! isLoading ) {
+    ITEM_DATA = {
+      thumbnail: data.properties.Picture?.files[0]?.file.url,
+      name: data.properties.Name?.title[0]?.plain_text,
+      name_en: data.properties.Name_en?.rich_text[0]?.plain_text,
+      proof: data.properties.Proof?.number,
+      category: data.properties.Category?.select.name,
+      country: data.properties.Country?.rich_text[0]?.plain_text,
+      brewery: data.properties.Brewery?.rich_text[0]?.plain_text,
+      tags: data.properties.Tags?.multi_select,
+    }
   }
 
   return (
@@ -48,7 +42,7 @@ function Detail() {
 
       {
         ! error && (
-          ! isLoaded ? <Loading />
+          isLoading ? <Loading />
           : (
             <>
               {

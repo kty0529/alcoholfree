@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 
 // components
 import Loading from "../../components/Loading/Loading";
@@ -9,21 +9,12 @@ import Error from "../../components/Error/Error";
 import "./Main.scss";
 
 function Main() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [item, setItem] = useState([]);
-
-  useEffect(() => {
-    fetch(process.env.REACT_APP_NOTION_API)
-      .then((res) => res.json())
-      .then((res) => {
-        setIsLoaded(true);
-        setItem(res.results);
-      }, (error) => {
-        setIsLoaded(true);
-        setError(error);
-      });
-  }, []);
+  const { isLoading, data, error } = useQuery("fetchList", async () => {
+    return await fetch(process.env.REACT_APP_NOTION_API)
+      .then(res => res.json());
+  }, {
+    refetchOnWindowFocus: false
+  });
 
   return (
     <main className="main">
@@ -33,12 +24,12 @@ function Main() {
 
       {
         ! error && (
-          ! isLoaded ? <Loading />
+          isLoading ? <Loading />
           : (
             <div className="lists">
               <ul>
                 {
-                  item.map((drink, index) => {
+                  data.results.map((drink, index) => {
                     return (
                       <li key={index}>
                         <DrinkListItem
