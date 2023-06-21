@@ -20,6 +20,7 @@ function Detail() {
     refetchOnWindowFocus: false
   });
 
+  // 노션에서 반환하는 데이터의 구조가 너무 복잡해서 변수에 저장...
   let ITEM_DATA = {};
   if ( ! isLoading ) {
     ITEM_DATA = {
