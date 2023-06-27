@@ -5,6 +5,7 @@
 - [ ] 상세 페이지 내 page content 데이터 연결
   - React Query를 한번 더 돌려야하는데, [Queries](https://tanstack.com/query/v3/docs/react/guides/queries) 참고
 - [ ] 이미지 로드에 블럭 현상을 보여주지 않게 적절한 효과 적용
+- [ ] 코너 선생님이 해주신 [코드리뷰](https://www.notion.so/wallel/03e2d750095d466a949ce4b09972a91b) 진행
 
 - [ ] router errorElement 추가
 - [ ] Error, Loading 컴포넌트 하나로 합치고 재활용할 수 있게 적절한 컴포넌트로 변경
