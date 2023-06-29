@@ -28,10 +28,13 @@
     font-weight: 700;
 
     small {
-      display: block;
-      color: $darkgray;
-      font-size: 12px;
+      font-weight: 400;
     }
+  }
+
+  .title-en {
+    color: $darkgray;
+    font-size: 12px;
   }
 
   .category {

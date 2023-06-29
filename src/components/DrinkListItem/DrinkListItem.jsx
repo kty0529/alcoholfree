@@ -29,9 +29,16 @@ function DrinkListItem(props) {
       <div className={styles.content}>
         <div className={styles.title}>
           {ITEM_DATA.name}
-          {ITEM_DATA.proof && ` (${ITEM_DATA.proof}%)`}
-          {ITEM_DATA.name_en && <small>{ITEM_DATA.name_en}</small>}
+          {ITEM_DATA.proof && (<small>&nbsp;({ITEM_DATA.proof}%)</small>)}
         </div>
+
+        {
+          ITEM_DATA.name_en && (
+            <div className={styles["title-en"]}>
+              {ITEM_DATA.name_en}
+            </div>
+          )
+        }
 
         <div className={styles.category}>
           <Badge
