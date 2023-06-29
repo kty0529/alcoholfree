@@ -24,12 +24,12 @@ function DrinkListItem(props) {
     >
       <div className={styles.thumbnail}>
         {ITEM_DATA.thumbnail && <img loading="lazy" src={ITEM_DATA.thumbnail} alt="썸네일 이미지" />}
-        {ITEM_DATA.proof && <span className={styles.proof}>{ITEM_DATA.proof}%</span>}
       </div>
 
       <div className={styles.content}>
         <div className={styles.title}>
           {ITEM_DATA.name}
+          {ITEM_DATA.proof && ` (${ITEM_DATA.proof}%)`}
           {ITEM_DATA.name_en && <small>{ITEM_DATA.name_en}</small>}
         </div>
 
