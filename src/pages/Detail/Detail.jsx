@@ -54,14 +54,14 @@ function Detail() {
                     />
 
                     <a
-                      className={styles.original}
+                      className={styles.zoomin}
                       href={ITEM_DATA.thumbnail}
                       aria-label="이미지 원본 보기"
                       target="_blank"
                       rel="noreferrer"
                     >
                       <span className="material-icons-outlined">
-                        open_in_new
+                        zoom_in
                       </span>
                     </a>
 
