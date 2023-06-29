@@ -3,7 +3,7 @@
 ### Todo
 
 - [ ] 코너 선생님이 해주신 [코드리뷰](https://www.notion.so/wallel/03e2d750095d466a949ce4b09972a91b) 진행
-  - [ ] [1.](https://www.notion.so/wallel/03e2d750095d466a949ce4b09972a91b?pvs=4#28d2894881d94c719685d730a10e3f25) css module 적용 ([Line](https://github.com/kty0529/alcoholfree/blob/75c5c439bd768d2800b65d6b4239513098dcbf50/src/pages/Detail/Detail.jsx#L10C1-L10C1))
+  - [x] [1.](https://www.notion.so/wallel/03e2d750095d466a949ce4b09972a91b?pvs=4#28d2894881d94c719685d730a10e3f25) css module 적용 ([Line](https://github.com/kty0529/alcoholfree/blob/75c5c439bd768d2800b65d6b4239513098dcbf50/src/pages/Detail/Detail.jsx#L10C1-L10C1))
   - [ ] [2.](https://www.notion.so/wallel/03e2d750095d466a949ce4b09972a91b?pvs=4#e51547e079c6484287493be187703ea1) react query global option 적용 ([Line](https://github.com/kty0529/alcoholfree/blob/75c5c439bd768d2800b65d6b4239513098dcbf50/src/pages/Detail/Detail.jsx#L16))
   - [ ] [3.](https://www.notion.so/wallel/03e2d750095d466a949ce4b09972a91b?pvs=4#1923b64c07f54007bba0f10a4b75d670) isLoading 대신 React 18 [Suspense](https://react.dev/reference/react/Suspense) 활용 ([Line](https://github.com/kty0529/alcoholfree/blob/75c5c439bd768d2800b65d6b4239513098dcbf50/src/pages/Detail/Detail.jsx#L46C16-L46C16))
   - [ ] [4.](https://www.notion.so/wallel/03e2d750095d466a949ce4b09972a91b?pvs=4#af616e5c9ff447a7998054c4c1fd2ba6) 노션 반환값을 쉽게 사용할 수 있게 useQuery에서 함수화 해서 반환 고려 ([Line](https://github.com/kty0529/alcoholfree/blob/75c5c439bd768d2800b65d6b4239513098dcbf50/src/pages/Detail/Detail.jsx#L26))
