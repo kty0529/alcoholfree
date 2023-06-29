@@ -1,13 +1,13 @@
-import "./Error.scss";
+import styles from "./Error.module.scss";
 
 function Error() {
   return (
-    <div className="error-message">
-      <span className="icon material-icons-outlined">
+    <div className={styles.message}>
+      <span className={`${styles.icon} material-icons-outlined`}>
         priority_high
       </span>
 
-      <div className="text">
+      <div className={styles.text}>
         데이터 로드에 실패했습니다!
         <br />왜지?
         <br />

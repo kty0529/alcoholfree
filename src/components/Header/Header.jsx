@@ -1,17 +1,17 @@
 import Logo from "../../assets/svgs/logo.svg";
 
-import "./Header.scss";
+import styles from "./Header.module.scss";
 
 function Header() {
   return (
-    <header className="header">
-      <h1 className="title">
+    <header className={styles.header}>
+      <h1 className={styles.title}>
         <a href={process.env.PUBLIC_URL} aria-label="알콜프리">
           <img src={Logo} alt="알콜프리 로고 이미지" />
         </a>
       </h1>
 
-      <nav className="navigation">
+      {/* <nav className={styles.navigation}>
         <ul>
           <li>
             <a href="#1" aria-label="검색">
@@ -24,7 +24,7 @@ function Header() {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 }

@@ -7,7 +7,7 @@ import Loading from "../../components/Loading/Loading";
 import Badge from "../../components/Badge/Badge";
 
 // pages
-import "./Detail.scss";
+import styles from "./Detail.module.scss";
 
 function Detail() {
   const { page_id } = useParams();
@@ -36,7 +36,7 @@ function Detail() {
   }
 
   return (
-    <main className="detail">
+    <main className={styles.detail}>
       {
         error && <Error />
       }
@@ -48,15 +48,15 @@ function Detail() {
             <>
               {
                 ITEM_DATA.thumbnail && (
-                  <div className="thumbnail-block">
+                  <div className={styles["thumbnail-block"]}>
                     <img
-                      className="thumbnail"
+                      className={styles.thumbnail}
                       src={ITEM_DATA.thumbnail}
                       alt="썸네일 이미지"
                     />
 
                     <a
-                      className="original"
+                      className={styles.original}
                       href={ITEM_DATA.thumbnail}
                       aria-label="이미지 원본 보기"
                       target="_blank"
@@ -68,7 +68,7 @@ function Detail() {
                     </a>
 
                     <img
-                      className="background"
+                      className={styles.background}
                       src={ITEM_DATA.thumbnail}
                       alt="썸네일 이미지"
                     />
@@ -78,17 +78,17 @@ function Detail() {
 
               {
                 ITEM_DATA.name && (
-                  <div className="data-block">
-                    <h2 className="title">{ITEM_DATA.name}</h2>
+                  <div className={styles["data-block"]}>
+                    <h2 className={styles.title}>{ITEM_DATA.name}</h2>
 
                     <ul>
-                      {ITEM_DATA.name_en && <li className="name_en"><strong>영문</strong> : {ITEM_DATA.name_en}</li>}
-                      {ITEM_DATA.proof && <li className="proof"><strong>도수</strong> : {ITEM_DATA.proof}%</li>}
-                      {ITEM_DATA.category && <li className="category"><strong>분류</strong> : {ITEM_DATA.category}</li>}
-                      {ITEM_DATA.country && <li className="country"><strong>제조국</strong> : {ITEM_DATA.country}</li>}
-                      {ITEM_DATA.brewery && <li className="brewery"><strong>제조사</strong> : {ITEM_DATA.brewery}</li>}
+                      {ITEM_DATA.name_en && <li><strong>영문</strong> : {ITEM_DATA.name_en}</li>}
+                      {ITEM_DATA.proof && <li><strong>도수</strong> : {ITEM_DATA.proof}%</li>}
+                      {ITEM_DATA.category && <li><strong>분류</strong> : {ITEM_DATA.category}</li>}
+                      {ITEM_DATA.country && <li><strong>제조국</strong> : {ITEM_DATA.country}</li>}
+                      {ITEM_DATA.brewery && <li><strong>제조사</strong> : {ITEM_DATA.brewery}</li>}
                       {ITEM_DATA.tags && (
-                        <li className="tags">
+                        <li className={styles.tags}>
                           {ITEM_DATA.tags.map((tag, index) => (
                             <Badge
                               key={index}
