@@ -12,8 +12,6 @@ function Main() {
   const { isLoading, data, error } = useQuery("fetchList", async () => {
     return await fetch(process.env.REACT_APP_NOTION_API)
       .then(res => res.json());
-  }, {
-    refetchOnWindowFocus: false
   });
 
   return (

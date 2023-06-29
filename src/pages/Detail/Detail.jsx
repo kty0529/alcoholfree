@@ -16,8 +16,6 @@ function Detail() {
   const { isLoading, data, error } = useQuery("fetchDetail", async () => {
     return await fetch(`${process.env.REACT_APP_NOTION_API}/pages.php?id=${page_id}`)
       .then(res => res.json());
-  }, {
-    refetchOnWindowFocus: false
   });
 
   // 노션에서 반환하는 데이터의 구조가 너무 복잡해서 변수에 저장...
