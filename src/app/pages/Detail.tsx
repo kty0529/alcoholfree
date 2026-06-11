@@ -4,6 +4,7 @@ import { ZoomInIcon } from "lucide-react";
 import { Loading } from "../components/Loading";
 import { ErrorMessage } from "../components/ErrorMessage";
 import { Badge } from "../components/Badge";
+import { getMockDetail } from "../mock/data";
 
 const NOTION_API = import.meta.env.VITE_NOTION_API;
 
@@ -13,6 +14,7 @@ export function Detail() {
   const { isLoading, data, error } = useQuery({
     queryKey: ["fetchDetail", page_id],
     queryFn: async () => {
+      if (!NOTION_API) return getMockDetail(page_id ?? "");
       const res = await fetch(`${NOTION_API}/pages.php?id=${page_id}`);
       return res.json();
     },

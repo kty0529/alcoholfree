@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { DrinkListItem } from "../components/DrinkListItem";
 import { Loading } from "../components/Loading";
 import { ErrorMessage } from "../components/ErrorMessage";
+import { MOCK_LIST } from "../mock/data";
 
 const NOTION_API = import.meta.env.VITE_NOTION_API;
 
@@ -9,6 +10,7 @@ export function Main() {
   const { isLoading, data, error } = useQuery({
     queryKey: ["fetchList"],
     queryFn: async () => {
+      if (!NOTION_API) return MOCK_LIST;
       const res = await fetch(NOTION_API);
       return res.json();
     },
