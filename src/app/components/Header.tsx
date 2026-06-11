@@ -11,13 +11,13 @@ export function Header() {
       <div style={{
         maxWidth: "1400px",
         margin: "0 auto",
-        padding: "0 20px",
+        padding: "0 16px",
         height: "56px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
       }}>
-        <a href="/" style={{ display: "flex", alignItems: "baseline", gap: "10px", textDecoration: "none", flexShrink: 0 }}>
+        <a href="#/" style={{ display: "flex", alignItems: "baseline", gap: "8px", textDecoration: "none", flexShrink: 0 }}>
           <span style={{
             fontFamily: "'Bodoni Moda', serif",
             fontStyle: "italic",
@@ -31,10 +31,10 @@ export function Header() {
           </span>
           <span style={{
             fontFamily: "'DM Mono', monospace",
-            fontSize: "10px",
+            fontSize: "12px",
             fontWeight: 400,
             color: "#c8a97e",
-            letterSpacing: "0.2em",
+            letterSpacing: "0.15em",
             textTransform: "uppercase",
             whiteSpace: "nowrap",
           }}>
@@ -44,9 +44,9 @@ export function Header() {
         <nav className="header-nav" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <span className="header-nav-label" style={{
             fontFamily: "'DM Mono', monospace",
-            fontSize: "10px",
+            fontSize: "12px",
             fontWeight: 400,
-            letterSpacing: "0.15em",
+            letterSpacing: "0.1em",
             textTransform: "uppercase",
             color: "rgba(242,237,230,0.6)",
             whiteSpace: "nowrap",
