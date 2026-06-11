@@ -6,7 +6,18 @@ interface BadgeProps {
 export function Badge({ color, text }: BadgeProps) {
   return (
     <span
-      className={`notion-multi-select-color-${color} inline-flex h-5 items-center justify-center rounded px-1.5`}
+      className={`notion-multi-select-color-${color}`}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        padding: "3px 9px",
+        borderRadius: "2px",
+        fontSize: "10px",
+        fontFamily: "'DM Mono', monospace",
+        fontWeight: 500,
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+      }}
     >
       {text}
     </span>
