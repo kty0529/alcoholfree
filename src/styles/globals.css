@@ -1,0 +1,42 @@
+/* Notion multi-select colors */
+.notion-multi-select-color-default,
+.notion-multi-select-color-lightgray {
+  background-color: rgba(227, 226, 224, 0.5);
+  color: rgb(50, 48, 44);
+}
+.notion-multi-select-color-gray {
+  background-color: rgb(227, 226, 224);
+  color: rgb(50, 48, 44);
+}
+.notion-multi-select-color-brown {
+  background-color: rgb(238, 224, 218);
+  color: rgb(68, 42, 30);
+}
+.notion-multi-select-color-orange {
+  background-color: rgb(250, 222, 201);
+  color: rgb(73, 41, 14);
+}
+.notion-multi-select-color-yellow {
+  background-color: rgb(253, 236, 200);
+  color: rgb(64, 44, 27);
+}
+.notion-multi-select-color-green {
+  background-color: rgb(219, 237, 219);
+  color: rgb(28, 56, 41);
+}
+.notion-multi-select-color-blue {
+  background-color: rgb(211, 229, 239);
+  color: rgb(24, 51, 71);
+}
+.notion-multi-select-color-purple {
+  background-color: rgb(232, 222, 238);
+  color: rgb(65, 36, 84);
+}
+.notion-multi-select-color-pink {
+  background-color: rgb(245, 224, 233);
+  color: rgb(76, 35, 55);
+}
+.notion-multi-select-color-red {
+  background-color: rgb(255, 226, 221);
+  color: rgb(93, 23, 21);
+}
